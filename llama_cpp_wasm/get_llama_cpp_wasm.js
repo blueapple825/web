@@ -1,4 +1,4 @@
-import { LlamaCpp } from "llama.js";
+import { LlamaCpp } from "./llama.js";
 
 function getLlama(model, onModelLoaded, onMessageChunk, onComplete) {
   return new LlamaCpp(
@@ -8,3 +8,5 @@ function getLlama(model, onModelLoaded, onMessageChunk, onComplete) {
     onComplete,
   );
 }
+
+window.getLlama = getLlama;
